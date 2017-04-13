@@ -29,6 +29,7 @@ public class MyText extends JFrame {
     }
     public void go() {
         textViewer = new JTextArea(50, 30);
+        textViewer.setEditable(false);
         up.add(textViewer);
         textToAdd = new JTextField(20);
         execAdd = new JButton("Add");
