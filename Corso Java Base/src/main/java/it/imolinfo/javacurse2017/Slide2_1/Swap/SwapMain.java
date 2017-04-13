@@ -51,7 +51,7 @@ static void eseguiSwap(Counter c, Counter d){
 
 		SwapMain Swap1 = new SwapMain();
 		Swap1.eseguiSwap(a,b);
-		System.out.println(a.getValue() + " " + b.getValue());
+		System.out.println("Invertito " + a.getValue() + " con " + b.getValue());
 		
 	}
 	

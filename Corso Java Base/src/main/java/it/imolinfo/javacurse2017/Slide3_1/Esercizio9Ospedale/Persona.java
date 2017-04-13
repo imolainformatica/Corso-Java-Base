@@ -23,7 +23,7 @@ public class Persona {
 	
 	public void Stampa() {
 		
-		System.out.println(Nome + " " + Cognome  + " di " + età + "anni - CF:" + codiceFiscale);
+		System.out.println("Paziente:" + Nome + " " + Cognome  + " di " + età + "anni - CF:" + codiceFiscale);
 	}
 	
 }

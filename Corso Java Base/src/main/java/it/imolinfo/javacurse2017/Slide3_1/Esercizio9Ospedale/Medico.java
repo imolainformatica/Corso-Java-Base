@@ -19,7 +19,7 @@ public class Medico {
 
 	}
 
-	private void Stampa() {
+	public void Stampa() {
 
 		System.out.println(nome + " " + cognome + " è un " + ruolo + " di " + età + "anni - CF:" + codiceFiscale);
 	}

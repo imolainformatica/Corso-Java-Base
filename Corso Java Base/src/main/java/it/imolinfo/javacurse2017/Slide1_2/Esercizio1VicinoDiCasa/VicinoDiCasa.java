@@ -38,6 +38,6 @@ public class VicinoDiCasa {
    //In particolare, i ns. oggetti vicini di casa 
    //fanno solo una cosa: salutano ...
    public void saluta(){
-      System.out.println("Ciao Vicino, io sono " + nome + "!");
+      System.out.println("Hello World from " + nome + "!");
    }
 }

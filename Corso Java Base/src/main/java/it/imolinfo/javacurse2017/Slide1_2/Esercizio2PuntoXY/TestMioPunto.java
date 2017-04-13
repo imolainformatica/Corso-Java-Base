@@ -26,24 +26,10 @@ public class TestMioPunto {
 		fine.setY(30);
 */
 		// Step 3: stampa di inizio e fine
-		System.out.println("Inizio  " + inizio);
-		System.out.println("Fine " + fine);
-		System.out.println();
+		System.out.println("Punto Inizio  " + inizio);
+		System.out.println("Punto Fine " + fine);
+		System.out.println("Questo è il mio Punto. Si posiziona sulla coordinata X =" + inizio.getX() + " e sulla coordinata Y=" + inizio.getY() +" del piano cartesiano");
 
-		// Step 5: dichiara e si assegna vagante uguale a fine
-		MioPunto vagante = fine;
-
-		// Step 6: declare and assign stray to end
-		System.out.println("Vagante " + vagante);
-		System.out.println("Fine " + fine);
-		System.out.println();
-
-		// Step 7: assegnano nuovi valori a vagante
-		vagante.setX(47);
-		vagante.setY(50);
-		System.out.println("Vagante " + vagante);
-		System.out.println("Fine " + fine);
-		System.out.println("Inizio " + inizio);
 
 	
 	}

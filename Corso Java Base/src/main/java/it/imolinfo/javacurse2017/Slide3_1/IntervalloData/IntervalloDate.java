@@ -26,7 +26,7 @@ public class IntervalloDate {
 			pe.printStackTrace();
 		}
 		
-		//creo due istanze Calendar(hanno il tempo e l'ora corrente
+		//creo due istanze Calendar(hanno il tempo e l'ora corrente)
 		Calendar cal1 = Calendar.getInstance();  
 		Calendar cal2 = Calendar.getInstance(); 
 		

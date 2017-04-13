@@ -98,7 +98,9 @@ public class Ospedale {
 		pazientiXmedico.addAll(pazienti.get(input));
 		ArrayList<Persona> pazientixMedicoMaGiovani = new ArrayList<Persona>();
 		ArrayList<Ricetta> ricettexPaziente = new ArrayList<Ricetta>();
-		System.out.println(input.nome + input.cognome);
+		input.Stampa();
+		
+		
 			for (Persona p: pazientiXmedico) {
 				if (p.età < 70) {
 					pazientixMedicoMaGiovani.add(p);
@@ -107,10 +109,9 @@ public class Ospedale {
 					
 					for(Ricetta r: ricettexPaziente) {
 						if (ricettexPaziente.size() > 5) {
-							r.Stampa();
+							//ricettexPaziente.toString();		
 					}
-						
-						
+					
 					}
 					
 				}

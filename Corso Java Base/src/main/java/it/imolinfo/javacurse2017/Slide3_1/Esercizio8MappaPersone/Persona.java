@@ -19,8 +19,8 @@ public class Persona {
 	
 	//public @Override
 	public String toString() {
-		System.out.println(Nome + " " + Cognome + " è un/una " + Sesso + " di " + età + "anni - CF:" + codiceFiscale);
-		return super.toString();
+		System.out.println("Valore:" + Nome + " " + Cognome + " è un/una " + Sesso + " di " + età + "anni");
+		return "Chiave:" + codiceFiscale;
 	}
 		
 		

@@ -48,7 +48,7 @@ import java.util.*;
 			while (i.hasNext()) {
 				Object ob = i.next();
 				sb = sb.append(ob);
-				sb = sb.append(" ");
+				sb = sb.append(",");
 			}
 			return sb.toString();
 		}
@@ -64,9 +64,7 @@ import java.util.*;
 			System.out.println("Elementi in coda: " + q);
 			
 			//prelevo elelmtnti dalla lista
-			System.out.println("Eseguo Get" );
-			q.get();
-			System.out.println("Eseguo Get" );
+			System.out.println("Eseguo Get!" );
 			q.get();
 			
 			//stampo il contenuto della lista

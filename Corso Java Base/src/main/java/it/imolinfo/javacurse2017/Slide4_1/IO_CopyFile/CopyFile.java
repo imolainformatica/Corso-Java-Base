@@ -1,4 +1,4 @@
-package it.imolinfo.javacurse2017.IO_CopyFile;
+package it.imolinfo.javacurse2017.Slide4_1.IO_CopyFile;
 import java.io.*;
 
 /** Applicazione CopyFile

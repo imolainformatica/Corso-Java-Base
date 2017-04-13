@@ -1,4 +1,4 @@
-package it.imolinfo.javacurse2017.IO_ContaParole;
+package it.imolinfo.javacurse2017.Slide4_1.IO_ContaParole;
 
 /** Applicazione ContaParole
  *  Utilizza uno Stream in lettura "costruito" concatenando

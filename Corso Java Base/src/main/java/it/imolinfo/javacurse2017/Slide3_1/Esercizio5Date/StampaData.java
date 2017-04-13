@@ -25,7 +25,7 @@ public class StampaData {
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMMM-YYYY");
 		System.out.println("Current:" + sdf.format(d1));
-		System.out.println(sdf.format(c.getTime()));
+		System.out.println("Old:"+ sdf.format(c.getTime()));
 		//System.out.println(sdf.format(c1.getTime()));
 	}
 }

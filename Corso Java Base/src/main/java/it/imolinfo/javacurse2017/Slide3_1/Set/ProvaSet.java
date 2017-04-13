@@ -22,6 +22,7 @@ public class ProvaSet {
 		set.add("Luisa");
 		set.add("Luisa");
 		System.out.println(set); // chiama il toString()
+		
 		Set sortedSet = new TreeSet(set);
 		System.out.println(sortedSet);
 	}

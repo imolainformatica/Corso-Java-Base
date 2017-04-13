@@ -1,4 +1,4 @@
-package it.imolinfo.javacurse2017.ByteArrayIOSample;
+package it.imolinfo.javacurse2017.Slide4_1.ByteArrayIOSample;
 
 /** Applicativo ByteArrayIOSample
  *  Usa oggetti delle classi ByteArray(I/O)Stream 

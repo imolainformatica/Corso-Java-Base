@@ -3,7 +3,7 @@
     Semplice esempio di utilizzo dello stream System.out
 */
 
-package it.imolinfo.javacurse2017.IO_OutSample;
+package it.imolinfo.javacurse2017.Slide4_1.IO_OutSample;
 import java.io.*;
 
 public class OutSample {

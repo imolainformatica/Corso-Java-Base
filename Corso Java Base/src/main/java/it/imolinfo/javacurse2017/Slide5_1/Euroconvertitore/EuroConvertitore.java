@@ -4,7 +4,7 @@
  * To change the template for this generated file go to
  * Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-package it.imolinfo.javacurse2017.Euroconvertitore;
+package it.imolinfo.javacurse2017.Slide5_1.Euroconvertitore;
 
 /**
  * @author Lorenzo
@@ -48,7 +48,7 @@ public class EuroConvertitore extends WindowAdapter implements ActionListener{
   }
  
   public static void main(String[] args) {
-	EuroConvertitore p=new EuroConvertitore();
+	  EuroConvertitore p=new EuroConvertitore();
   }
 
  

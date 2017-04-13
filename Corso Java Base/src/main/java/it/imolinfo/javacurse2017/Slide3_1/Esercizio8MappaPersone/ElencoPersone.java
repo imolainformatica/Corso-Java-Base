@@ -24,10 +24,10 @@ public class ElencoPersone {
 		for (Persona p: persone) {
 			
 			mappaPersone.put(p.codiceFiscale, p);
-			
+			System.out.println(p);
+
 		}
 		
-		System.out.println(mappaPersone);
 		
 	}
 	

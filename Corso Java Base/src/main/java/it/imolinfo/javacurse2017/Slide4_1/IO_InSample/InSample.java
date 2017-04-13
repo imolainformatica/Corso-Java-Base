@@ -1,4 +1,4 @@
-package it.imolinfo.javacurse2017.IO_InSample;
+package it.imolinfo.javacurse2017.Slide4_1.IO_InSample;
 import java.io.*;
 
 public class InSample {

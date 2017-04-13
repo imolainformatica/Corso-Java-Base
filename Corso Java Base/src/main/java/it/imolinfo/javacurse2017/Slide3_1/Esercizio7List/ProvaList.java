@@ -30,17 +30,13 @@ public class ProvaList {
 		System.out.println(list);
 		
 		//stampo l'elemento della lista in posizione due
-		System.out.println("2: " + list.get(2));
+		System.out.println("Al Posto 2: " + list.get(2));
 		
 		//stampo l'elemento della lista in posizione zero
-		System.out.println("0: " + list.get(0));
+		System.out.println("Al Posto 0: " + list.get(0));
 
 		//Costruisco una LinkedList
 		//NOTA: Linked list implementation of the List interface. 
-		//      Implements all optional list operations, and permits all elements (including null). 
-		//      In addition to implementing the List interface, the LinkedList class provides uniformly named 
-		//      methods to get, remove and insert an element at the beginning and end of the list. 
-		//      These operations allow linked lists to be used as a stack, queue, or double-ended queue (deque).
 		LinkedList queue = new LinkedList();
 		queue.addFirst("Clara");
 		queue.addFirst("Luisa");
@@ -50,12 +46,12 @@ public class ProvaList {
 		queue.addFirst("Clara");
 		
 
-		System.out.println(queue);
+		System.out.println("Linked List:"+queue);
 
 		//rimuovo gli ultimi due elementi dalla lista
 		queue.removeLast();
 		queue.removeLast();
-		System.out.println(queue);
+		System.out.println("Rimozione elementi: "+queue);
 	}
 
 }
