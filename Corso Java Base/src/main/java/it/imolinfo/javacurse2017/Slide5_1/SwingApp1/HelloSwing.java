@@ -14,7 +14,9 @@ public class HelloSwing extends JFrame{
     public HelloSwing(){
         // uso il costruttore della SUPER classe
         super("HelloSwing");
-        body = new JLabel("Ciao SWING! addio AWT");MainPanel = super.getContentPane();MainPanel.add( body );
+        body = new JLabel("Ciao SWING! addio AWT");
+        MainPanel = super.getContentPane();
+        MainPanel.add( body );
     }
     public void go(){
         // aggiungo la gestione della chiusura del frame

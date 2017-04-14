@@ -5,8 +5,7 @@ public class InSample {
   static public void main (String args[]) throws IOException {
    
     // Defines the standard input stream
-    BufferedReader stdin = new BufferedReader
-      (new InputStreamReader(System.in));
+    BufferedReader stdin = new BufferedReader (new InputStreamReader(System.in));
     String message; // Creates a varible called message for input
 
     System.out.print ("Enter the message : ");

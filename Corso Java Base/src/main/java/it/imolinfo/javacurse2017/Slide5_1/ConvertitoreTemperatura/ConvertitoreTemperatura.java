@@ -8,8 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class ConvertitoreTemperatura extends JFrame
-        implements ActionListener {
+public class ConvertitoreTemperatura extends JFrame implements ActionListener {
     JButton btnConverti;
     JLabel lbTempCelsius, lbTempKelvin;
     JTextField txtTempCelsius, txtTempKelvin;
@@ -50,6 +49,7 @@ public class ConvertitoreTemperatura extends JFrame
     }
 
     public static void main(String[] args) {
+
         ConvertitoreTemperatura frame = new ConvertitoreTemperatura();
     }
 }

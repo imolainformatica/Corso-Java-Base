@@ -8,8 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class CiclaParole extends JFrame
-        implements ActionListener {
+public class CiclaParole extends JFrame implements ActionListener {
     JButton btnSuccessiva;
     JLabel lbParola;
     JPanel pannello;
@@ -38,6 +37,7 @@ public class CiclaParole extends JFrame
     }
 
     public static void main(String[] args) {
+
         CiclaParole frame = new CiclaParole();
     }
 }

@@ -19,8 +19,10 @@ class ins3 {
         }catch(NumberFormatException e){
             if(st.charAt(0)=='j'){
                 try{
-                    i=Integer.parseInt(st.substring(1, st.length()));          }
-                catch(NumberFormatException w){          System.out.println("impossibile"); }
+                    i=Integer.parseInt(st.substring(1, st.length()));
+                }
+                catch(NumberFormatException w){
+                    System.out.println("impossibile"); }
             }else System.out.println("impossibile");
         }//fine try-catch
         if(r!=0)System.out.println("Numero Reale:"+r);

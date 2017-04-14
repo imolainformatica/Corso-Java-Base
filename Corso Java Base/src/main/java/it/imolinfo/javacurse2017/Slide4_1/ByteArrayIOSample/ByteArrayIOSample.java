@@ -23,6 +23,8 @@ public class ByteArrayIOSample {
             byteArrayOutStream.write(stringsArray[i].charAt(j));
          //Agiunge un separatore tra le parole:
          byteArrayOutStream.write('.');
+         byteArrayOutStream.write('-');
+         byteArrayOutStream.write('.');
       }
       // Stampa a video il contenuto di byteArrayOutStream
       // NMB: println invoca impicitamente il metodo toString dell'oggetto.

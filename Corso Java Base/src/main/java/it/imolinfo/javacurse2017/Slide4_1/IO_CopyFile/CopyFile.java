@@ -19,7 +19,7 @@ public class CopyFile  {
 		FileOutputStream fileOutStream = new FileOutputStream ("text2.txt"); 
 
 		//Buffer di 256 byte:
-		byte buffer[] = new byte[256];
+		byte buffer[] = new byte[10];
 
 		//intero per testare il valore restituito da .read():
 		// quando � -1 significa EOF.
@@ -31,7 +31,8 @@ public class CopyFile  {
 		
 			while ((n = fileInStream.read(buffer)) > -1){
 				System.out.println("Ho riempito buffer, ora scrivo ...");
-				fileOutStream.write(buffer, 0, n);
+				System.out.println("Ho letto " + n);
+				fileOutStream.write(buffer, 0, 10);
 			}
 			System.out.println("File copiato.");
 			
