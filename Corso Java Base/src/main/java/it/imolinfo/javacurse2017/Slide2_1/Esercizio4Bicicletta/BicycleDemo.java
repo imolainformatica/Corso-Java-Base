@@ -46,6 +46,7 @@ public class BicycleDemo {
        //dell'oggetto Bike1 si modifica in TUTTE le istanze.
        //Anche quelle che ereditano (Mountainbike per esempio):
        //Il valore iniziale è:
+       System.out.println("-----------------");
        System.out.println("NumOfGear of ALL bikes:" + Bicycle.numOfGear);
        System.out.println("Change the numOfGear to 16");
        //Modifico il valore globale che appartiene alla classe.

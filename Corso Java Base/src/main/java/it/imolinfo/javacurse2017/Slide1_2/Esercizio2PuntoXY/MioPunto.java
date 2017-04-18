@@ -17,7 +17,8 @@ public class MioPunto {
 	private int x;
 	private int y;
 
-    MioPunto (int x, int y){
+
+	public MioPunto (int x, int y){
     	this.x = x;
     	this.y = y;
     }
@@ -28,6 +29,7 @@ public class MioPunto {
 		return x;
 	}
 	public int getY() {
+
 		return y;
 	}
 	public void setX(int i) {

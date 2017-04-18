@@ -37,13 +37,7 @@ public class Stack {
 		  }
 	}
 	
-	public Object pop(){
-		 if(first > 0){
-		      first --;
-			  return data[first];
-		 }
-		 return null; // Bisogna tornare qualcosa
-	}
+
 
 
 	

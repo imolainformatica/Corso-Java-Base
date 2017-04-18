@@ -30,6 +30,7 @@ public class VicinoDiCasa {
    //Costruttore (2)
    //Costruttore "vuoto"; usa un nome di default: Vercingetorige
    public VicinoDiCasa(){
+
       this.nome = "Vercingetorige";
    }
    
@@ -38,6 +39,7 @@ public class VicinoDiCasa {
    //In particolare, i ns. oggetti vicini di casa 
    //fanno solo una cosa: salutano ...
    public void saluta(){
+
       System.out.println("Hello World from " + nome + "!");
    }
 }

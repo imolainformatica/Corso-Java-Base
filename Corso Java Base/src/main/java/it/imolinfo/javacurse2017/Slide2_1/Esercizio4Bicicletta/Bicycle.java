@@ -107,7 +107,7 @@ public class Bicycle {
    // Stampa a schermo lo stato delle bici
    // si potrebbe inserire anche la nozione (compito a casa?)
    // di "bici ferma" e/o velocità massima raggiunta.
-   void printStates(){
+   public void printStates() {
       System.out.println("cadence:"+cadence+" speed:"+speed+" gear:"+gear);
    }
    
@@ -118,62 +118,5 @@ public class Bicycle {
    }
 }
 
-//Estendiamo la classe bicicletta e creiamo la 
-//classe Mountain Bike.
-class MountainBike extends Bicycle {
 
-   //Queste due proprietà, altezza del sellino
-   // e tipo di pneumatico differenziano e caratterizzano
-   //una MB da una bicicletta generica.
-   private int seatHeight; 
-   //Definisce un valore di default inizializzando a true:
-   private boolean IsOffRoadTyre = true;
 
-   // La classe derivata possiede un proprio costruttore
-   // che "inoltra" parte dei parametri alla SUPERclasse 
-   public MountainBike(int startHeight, int startCadence, int startSpeed, int startGear) {
-   super(startCadence, startSpeed, startGear);
-      //Chiama il costruttore di Bicycle (mediante super)
-   
-      //Assegna il valore all'unica variabile rimasta
-      seatHeight = startHeight;
-      
-      //Nota: il tipo di pneumatico è OffRoad x default.
-   }	
-   
-   // La classe derivata (come ogni classe) può avere
-   // più di un costruttore. Questo non accetta parametri
-   // e imposta dei valori di default 
-   public MountainBike(){
-   super(10, 1, 1);
-      seatHeight = 100;
-   }
-   
-   //Nuove variabili => nuovi metodi ...
-   public void setHeight(int newValue) {
-      seatHeight = newValue;
-   }
-
-   void SetRoadTyre(){
-      IsOffRoadTyre = false;
-   }
-   void SetOffRoadTyre(){
-      IsOffRoadTyre = true;
-   }
-
-   //NMB!!!
-   //Sfrutta il metodo di Bycicle per scrivere a schermo le proprietà
-   //comuni a padre e figlio e aggiunge la stampa 
-   //del tipo di ruota e dell'altezza del sellino
-   @Override  //<-javadoc
-   void printStates(){
-      super.printStates(); 
-      
-      String TyreType;// = "";
-      if(IsOffRoadTyre)
-         TyreType = "OffRoad";
-      else
-         TyreType = "Road";
-      System.out.println("Tyre:"+ TyreType + " Seat Height:" + seatHeight);
-   }
-}
