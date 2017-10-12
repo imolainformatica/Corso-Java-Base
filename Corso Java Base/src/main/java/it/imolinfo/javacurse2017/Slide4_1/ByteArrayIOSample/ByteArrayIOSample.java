@@ -19,12 +19,11 @@ public class ByteArrayIOSample {
       //Esegue un ciclo sugli elementi (stringhe)
       for(int i = 0; i < stringsArray.length ; i++){
          //e per ogni elemento scrive carattere per carattere
-         for(int j = 0; j < stringsArray[i].length(); j++)
-            byteArrayOutStream.write(stringsArray[i].charAt(j));
+         for(int j = 0; j < stringsArray[i].length(); j++) {
+             byteArrayOutStream.write(stringsArray[i].charAt(j));
+         }
          //Agiunge un separatore tra le parole:
-         byteArrayOutStream.write('.');
          byteArrayOutStream.write('-');
-         byteArrayOutStream.write('.');
       }
       // Stampa a video il contenuto di byteArrayOutStream
       // NMB: println invoca impicitamente il metodo toString dell'oggetto.
@@ -42,16 +41,15 @@ public class ByteArrayIOSample {
       System.out.println( "Byte disponibili : " +  availableBytes) ;
       
       // Usa un ciclo while per scrivere dallo Input Stream
-      int readValue = 0;
 /*
       //Si pu� usare un ciclo while testando l'output:
-      while((readValue = byteArrayInStream.read()) != -1){
+      while((int readValue = byteArrayInStream.read()) != -1){
          System.out.write(readValue);
       }
 */
       //Oppure un ciclo for in base al valore availableBytes:
       for(int j=0; j<availableBytes; j++){
-         readValue = byteArrayInStream.read();
+         int readValue = byteArrayInStream.read();
          System.out.print((char)readValue);
       }
     }

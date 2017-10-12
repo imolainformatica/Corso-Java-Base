@@ -17,7 +17,7 @@ public class Persona {
 		codiceFiscale = Nome.substring(0, 4) + Cognome.substring(0, 3)+ Sesso.charAt(0)+ età + cognome.substring(4);
 	}
 	
-	//public @Override
+	@Override
 	public String toString() {
 		System.out.println("Valore:" + Nome + " " + Cognome + " è un/una " + Sesso + " di " + età + "anni");
 		return "Chiave:" + codiceFiscale;

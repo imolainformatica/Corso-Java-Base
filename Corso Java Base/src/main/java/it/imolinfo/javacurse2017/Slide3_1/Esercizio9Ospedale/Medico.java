@@ -9,18 +9,13 @@ public class Medico {
 
 
 	public Medico(String nome, String cognome, int età) {
-		super();
 		this.nome = nome;
 		this.cognome = cognome;
 		this.età = età;
 		this.codiceFiscale = nome.substring(0, 4) + cognome.substring(0, 3)+ età + cognome.substring(4);
-
-
-
 	}
 
 	public void Stampa() {
-
 		System.out.println(nome + " " + cognome + " è un " + ruolo + " di " + età + "anni - CF:" + codiceFiscale);
 	}
 

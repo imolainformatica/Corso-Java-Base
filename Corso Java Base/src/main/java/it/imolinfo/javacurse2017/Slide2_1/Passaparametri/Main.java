@@ -16,8 +16,8 @@ public class Main {
     //Metodo main:
     public static void main(String[] args) {
     
-       //Oggetto passaparametri:
-       passaparametri p = new passaparametri(100, "parola iniziale");
+       //Oggetto Passaparametri:
+       Passaparametri p = new Passaparametri(100, "parola iniziale");
        //Dichiarazione di un po' di variabili locali:
        int variabile1 = 23;
        int variabile2 = 33;
@@ -51,13 +51,13 @@ public class Main {
        
        //Creo una copia DEL RIFERIMENTO all'oggetto
        //Di fatto ho due "puntatori" alla stessa entità
-       passaparametri pCopia = passaparametri.copiaOggetto(p);
+       Passaparametri pCopia = Passaparametri.copiaOggetto(p);
        System.out.println("\nHo copiato l'oggetto, nella copia trovo:");
        System.out.println("pCopia.numero = " + pCopia.numero);
        System.out.println("pCopia.stringa = " + pCopia.stringa);
        //Invece ora creo una copia "autonoma", cioè che non 
        //risente delle modifiche all'originale ma ha vita propria:
-       passaparametri pReplica = passaparametri.replicaOggetto(p);      
+       Passaparametri pReplica = Passaparametri.replicaOggetto(p);
        //Se infatti modifico una proprietà dell'originale:
        p.numero = 1234567890;
        //Avrò i seguenti esiti ...
@@ -65,7 +65,7 @@ public class Main {
        System.out.println("Trovo che pCopia.numero è           : "+pCopia.numero);
        System.out.println("Mentre per pReplica.numero è ancora   : "+pReplica.numero);    
        
-       passaparametri.printOggettiCreati();
+       Passaparametri.printOggettiCreati();
     }
 
 }

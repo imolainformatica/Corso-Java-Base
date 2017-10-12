@@ -14,33 +14,30 @@ public class CopyFile  {
 	static public void main (String args[]) throws IOException {
 		
 		//Se il file non esiste: exception
-		try {
-		FileInputStream fileInStream = new FileInputStream ("text.txt");
-		FileOutputStream fileOutStream = new FileOutputStream ("text2.txt"); 
+		try (
+			FileInputStream fileInStream = new FileInputStream ("text.txt");
+			FileOutputStream fileOutStream = new FileOutputStream ("text2.txt")
+		) {
 
-		//Buffer di 256 byte:
-		byte buffer[] = new byte[10];
+            //Buffer di 10 byte:
+            byte buffer[] = new byte[10];
 
-		//intero per testare il valore restituito da .read():
-		// quando � -1 significa EOF.
-		int n;
+            //intero per testare il valore restituito da .read():
+            // quando � -1 significa EOF.
+            int n;
 
-		//Ciclo di lettura e scrittura: ogni volta che il buffer
-		//è riempito lo scrive nel nuovo file e ricomincia.
-		//Il numero di cicli dipende dalle dimensioni del file.
-		
-			while ((n = fileInStream.read(buffer)) > -1){
-				System.out.println("Ho riempito buffer, ora scrivo ...");
-				System.out.println("Ho letto " + n);
-				fileOutStream.write(buffer, 0, 10);
-			}
-			System.out.println("File copiato.");
-			
-			//Chiude gli stream.
-			fileOutStream.close ();
-			fileInStream.close ();
-			
-		}catch(FileNotFoundException e) {
+            //Ciclo di lettura e scrittura: ogni volta che il buffer
+            //è riempito lo scrive nel nuovo file e ricomincia.
+            //Il numero di cicli dipende dalle dimensioni del file.
+
+            while ((n = fileInStream.read(buffer)) > -1){
+                System.out.println("Ho riempito buffer, ora scrivo ...");
+                System.out.println("Ho letto " + n);
+                fileOutStream.write(buffer, 0, 10);
+            }
+            System.out.println("File copiato.");
+
+		} catch (FileNotFoundException e) {
 			System.out.println("File not found");
 		}
 

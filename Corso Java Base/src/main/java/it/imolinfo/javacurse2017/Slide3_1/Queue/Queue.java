@@ -17,7 +17,7 @@ import java.util.*;
 
 	public class Queue {
 		
-		private LinkedList<Object> list = new LinkedList<Object>();
+		private LinkedList<Object> list = new LinkedList();
 		
 		//metodo pe aggiungere un elemento alla lista
 		public void put(Object v) {

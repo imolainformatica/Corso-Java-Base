@@ -1,4 +1,4 @@
-/** Progetto passaparametri
+/** Progetto Passaparametri
  *  In questo esempio:
  *    Si definisce una classe Passaparametri che funge
  *    da contenitore di alcuni esempi sul modo
@@ -22,7 +22,7 @@ package it.imolinfo.javacurse2017.Slide2_1.Passaparametri;
  * Mokabyte - Imola Informatica
  * Autore: Giuliano
  */
-public class passaparametri{
+public class Passaparametri {
    
    //Propietà della classe:
    public int numero;
@@ -33,7 +33,7 @@ public class passaparametri{
    private static int oggettiCreati = 0;
            
    //costruttore della classe
-   public passaparametri(int numeroInput, String stringaInput){
+   public Passaparametri(int numeroInput, String stringaInput){
       
       //Queste caratterizzano il singolo oggetto:
       stringa = stringaInput;
@@ -72,7 +72,7 @@ public class passaparametri{
    //Il metodo passaOggetto riceve in input il RIFERIMENTO ad un oggetto
    //e ne modifica le proprietà.
    //In questo caso le modifiche alle proprietà dell'oggetto sono definitive
-   public void passaOggetto(passaparametri p, int nuovoNumero, String nuovaStringa){
+   public void passaOggetto(Passaparametri p, int nuovoNumero, String nuovaStringa){
    
       //Dichiaro quello che ho ricevuto:
       System.out.println("I valori correnti sono: \"" + stringa + "\" e " + numero);
@@ -91,11 +91,11 @@ public class passaparametri{
    //Questo metodo crea una copia del riferimento all'oggetto passato
    //E' una utilità, la definiamo static così è accessibile a tutti
    //senza dover istanziare alcun oggetto.
-   public static passaparametri copiaOggetto(passaparametri pOriginale)
+   public static Passaparametri copiaOggetto(Passaparametri pOriginale)
    {
       //crea una copia del RIFERIMENTO all'oggetto
       //e la restiutisce:
-      passaparametri pCopia = pOriginale;
+      Passaparametri pCopia = pOriginale;
       return pCopia;
    }
 
@@ -103,15 +103,15 @@ public class passaparametri{
    //quello passato.
    //Anche questa è una utilità, la definiamo static così è accessibile a tutti
    //senza dover istanziare alcun oggetto.
-   public static passaparametri replicaOggetto(passaparametri pOriginale){
-      passaparametri pClone = new passaparametri(pOriginale.numero, pOriginale.stringa);
+   public static Passaparametri replicaOggetto(Passaparametri pOriginale){
+      Passaparametri pClone = new Passaparametri(pOriginale.numero, pOriginale.stringa);
       return pClone;
    }
    
    
    //Visualizza il numero di oggetti realmente creati con una new.
    public static void printOggettiCreati(){
-      System.out.println("Oggetti passaparametri finora creati:" + oggettiCreati);
+      System.out.println("Oggetti Passaparametri finora creati:" + oggettiCreati);
    }
    
 }

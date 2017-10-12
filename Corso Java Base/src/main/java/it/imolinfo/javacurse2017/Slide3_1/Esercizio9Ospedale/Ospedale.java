@@ -3,15 +3,16 @@ package it.imolinfo.javacurse2017.Slide3_1.Esercizio9Ospedale;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Random;
 
 public class Ospedale {
 	private ArrayList<Medico> medici = new ArrayList<>();
-	
 	private LinkedList<Persona> persone = new LinkedList<>();
-	private LinkedList<Ricetta> ricette = new LinkedList<>();
+	private LinkedList<Ricetta> ricette1 = new LinkedList<>();
+	private LinkedList<Ricetta> ricette2 = new LinkedList<>();
+	private LinkedList<Ricetta> ricette3 = new LinkedList<>();
 	private HashMap<Medico, LinkedList<Persona>> pazienti = new HashMap<>();
-	private HashMap<Persona, LinkedList<Ricetta>> prescrizioni = new HashMap<>();	
-	
+	private HashMap<Persona, LinkedList<Ricetta>> prescrizioni = new HashMap<>();
 
 	/**
 	 * Costruttore di Ospedale
@@ -33,31 +34,58 @@ public class Ospedale {
 		Persona p2 = new Persona(35, "Mario", "Rossi");
 		Persona p3 = new Persona(31, "Elisabetta", "Bersanetti");
 		Persona p4 = new Persona(67, "Dani", "Bersanetti");
+		Persona p5 = new Persona(78, "Daniele", "Bersanetti");
 		persone.add(p1);
 		persone.add(p2);
 		persone.add(p3);
 		persone.add(p4);
+		persone.add(p5);
 
 		Ricetta r1 = new Ricetta(25.50,45);
 		Ricetta r2 = new Ricetta(20.50,45);
 		Ricetta r3 = new Ricetta(10.50,45);
 		Ricetta r4 = new Ricetta(12.30,45);	
-		ricette.add(r1);
-		ricette.add(r2);
-		ricette.add(r3);
-		ricette.add(r4);
+		Ricetta r5 = new Ricetta(12.30,45);
+		Ricetta r6 = new Ricetta(12.30,45);
+		Ricetta r7 = new Ricetta(12.30,45);
+		ricette1.add(r1);
+		ricette1.add(r2);
+		ricette1.add(r3);
+		ricette1.add(r4);
+		ricette1.add(r5);
+		ricette1.add(r5);
+
+		ricette2.add(r1);
+		ricette2.add(r2);
+		ricette2.add(r3);
+		ricette2.add(r4);
+
+		ricette3.add(r1);
+		ricette3.add(r2);
 
 		for(Medico m: medici) {
 			pazienti.put(m, persone);
 		}
 
 		for (Persona p: persone) {
-			prescrizioni.put(p, ricette);
-		}
-		
-		
+			int random = new Random().nextInt(4);
+			switch(random) {
+				case 0:
+					prescrizioni.put(p, ricette1);
+					break;
 
+				case 1:
+					prescrizioni.put(p, ricette2);
+					break;
+
+				default:
+					prescrizioni.put(p, ricette2);
+					break;
+
+			}
+		}
 	}
+
 	public ArrayList<Medico> getMedici() {
 		return medici;
 	}
@@ -70,12 +98,7 @@ public class Ospedale {
 	public void setPersone(LinkedList<Persona> persone) {
 		this.persone = persone;
 	}
-	public LinkedList<Ricetta> getRicette() {
-		return ricette;
-	}
-	public void setRicette(LinkedList<Ricetta> ricette) {
-		this.ricette = ricette;
-	}
+
 	public HashMap<Medico, LinkedList<Persona>> getPazienti() {
 		return pazienti;
 	}
@@ -91,33 +114,25 @@ public class Ospedale {
 	
 	/**
 	 * Restituisce i pazienti con meno di trent'anni e con più di una ricetta per paziente dato un medico di input
-	 * @param input
+	 * @param medico
 	 */
-	public ArrayList<Persona> pazientiGiovani(Medico input) {
-		ArrayList<Persona> pazientiXmedico = new ArrayList<Persona>();
-		pazientiXmedico.addAll(pazienti.get(input));
-		ArrayList<Persona> pazientixMedicoMaGiovani = new ArrayList<Persona>();
-		ArrayList<Ricetta> ricettexPaziente = new ArrayList<Ricetta>();
-		input.Stampa();
-		
-		
-			for (Persona p: pazientiXmedico) {
-				if (p.età < 70) {
-					pazientixMedicoMaGiovani.add(p);
-					ricettexPaziente.addAll(prescrizioni.get(p));
+	public ArrayList<Persona> pazientiGiovani(Medico medico) {
+		ArrayList<Persona> pazientiXmedico = new ArrayList();
+		pazientiXmedico.addAll(pazienti.get(medico));
+		ArrayList<Persona> pazientixMedicoMaGiovani = new ArrayList();
+		ArrayList<Ricetta> ricettexPaziente = new ArrayList();
+		medico.Stampa();
+
+		for (Persona p: pazientiXmedico) {
+			if (p.età < 50) {
+				pazientixMedicoMaGiovani.add(p);
+				ricettexPaziente.addAll(prescrizioni.get(p));
+				if (ricettexPaziente.size() > 5) {
 					p.Stampa();
-					
-					for(Ricetta r: ricettexPaziente) {
-						if (ricettexPaziente.size() > 5) {
-							//ricettexPaziente.toString();		
-					}
-					
-					}
-					
 				}
 			}
-			return pazientixMedicoMaGiovani;
-		
+		}
+		return pazientixMedicoMaGiovani;
 	}
 	
 	

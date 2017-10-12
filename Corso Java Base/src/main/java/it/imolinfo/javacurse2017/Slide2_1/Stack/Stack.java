@@ -21,7 +21,7 @@ public class Stack {
 	public Stack (int num){
 		if (num >0) {
 		   	 data = new Object[num];
-		   	 size = num;
+		   	 size = num; // size = data.length();
 		  }
 		  else {
 		     data = new Object[10];

@@ -53,7 +53,6 @@ public class ContaParole {
       //Le successive operazioni possono generare delle eccezioni
       //quindi vanno inserite in un try ... catch:
       try{
-         
          fileInStream = new FileInputStream("text.txt");
          buffInStream = new BufferedInputStream(fileInStream);
          dataInStream = new DataInputStream(buffInStream);

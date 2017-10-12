@@ -12,7 +12,7 @@ public class IntervalloDate {
 	*/
 	public static void calcolaIntervalli(String data1, String data2, String formato){
 		
-		//imposto il formato della data
+		//imposto il formato della data del tipo dd-MMMM-YYYY; MMMM = mese esteso
 		SimpleDateFormat df = new SimpleDateFormat(formato);
 		
 		Date date1  = null;
@@ -50,7 +50,7 @@ public class IntervalloDate {
 		
 		//Calcolo la differenza di settimane
 		int weekOffset = (cal2.get(Calendar.DAY_OF_WEEK) - cal1.get(Calendar.DAY_OF_WEEK))<0 ? 1 : 0;
-		int weekDiff  = dateDiff/7 + weekOffset; 
+		int weekDiff  = dateDiff/7 + weekOffset;
 		
 		//Calcolo la differenza di anni
 		int yearDiff  = cal2.get(Calendar.YEAR) - cal1.get(Calendar.YEAR); 

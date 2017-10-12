@@ -8,24 +8,17 @@ public class Ricetta {
 	public int Codice;;
 	public double prezzo;
 	public Date data = new Date();
-	
+	private static final SimpleDateFormat SDF = new SimpleDateFormat("dd-MM-YYYY");
+
+
 	public Ricetta(double prezzo,int x) {
-		super();
-		this.data = data;
-		//Calendar c = new GregorianCalendar();
-		//this.data = (Date)c.getInstance();
-		
 		Random r1 = new Random();
-			
 		this.Codice = r1.nextInt(x);
 		this.prezzo = prezzo;
 	}
 	
-	
-	SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-YYYY");
-
 	public void Stampa () {
-		System.out.println("Ricetta nr." + Codice + " emessa il " + sdf.format(data) + ".Prezzo: € " + prezzo);
+		System.out.println("Ricetta nr." + Codice + " emessa il " + SDF.format(data) + ".Prezzo: € " + prezzo);
 	}
 	
 	

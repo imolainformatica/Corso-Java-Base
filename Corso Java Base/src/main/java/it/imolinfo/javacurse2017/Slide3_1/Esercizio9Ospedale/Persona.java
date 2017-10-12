@@ -6,13 +6,6 @@ public class Persona {
 	public String Cognome;
 	public String codiceFiscale;
 		
-	
-	@Override
-	public String toString() {
-		return "Persona [età=" + età + ", Nome=" + Nome + ", Cognome=" + Cognome + ", codiceFiscale=" + codiceFiscale
-				+ "]";
-	}
-
 	public Persona(int età, String nome, String cognome) {
 		super();
 		this.età = età;
@@ -24,6 +17,12 @@ public class Persona {
 	public void Stampa() {
 		
 		System.out.println("Paziente:" + Nome + " " + Cognome  + " di " + età + "anni - CF:" + codiceFiscale);
+	}
+
+	@Override
+	public String toString() {
+		return "Persona [età=" + età + ", Nome=" + Nome + ", Cognome=" + Cognome + ", codiceFiscale=" + codiceFiscale
+				+ "]";
 	}
 	
 }
